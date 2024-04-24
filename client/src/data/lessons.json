@@ -1,0 +1,44 @@
+{
+    "unit-1-lesson-1": {
+        "title": "Lesson 1",
+        "subtitle": "Basic Grammar",
+        "slides": [
+            {
+                "title": "Slide 1",
+                "image": "slide1.jpg"
+            },
+            {
+                "title": "Slide 2",
+                "image": "slide2.jpg"
+            }
+        ]
+    },
+    "unit-1-lesson-2": {
+        "title": "Lesson 2",
+        "subtitle": "Greetings",
+        "slides": [
+            {
+                "title": "Slide 1",
+                "image": "slide1.jpg"
+            },
+            {
+                "title": "Slide 2",
+                "image": "slide2.jpg"
+            }
+        ]
+    },
+    "unit-1-lesson-3": {
+        "title": "Lesson 3",
+        "subtitle": "Verbs",
+        "slides": [
+            {
+                "title": "Slide 1",
+                "image": "slide1.jpg"
+            },
+            {
+                "title": "Slide 2",
+                "image": "slide2.jpg"
+            }
+        ]
+    }
+}

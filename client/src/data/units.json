@@ -1,0 +1,10 @@
+{
+    "unit-1": {
+        "title": "Unit 1: Introduction",
+        "lessons": ["unit-1-lesson-1", "unit-1-lesson-2", "unit-1-lesson-3"]
+    },
+    "unit-2": {
+        "title": "Unit 2: Talk about food and drinks. Use common phrases.",
+        "lessons": ["unit-2-lesson-1", "unit-2-lesson-2"]
+    }
+}
