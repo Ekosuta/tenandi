@@ -1,4 +1,7 @@
 import customtkinter as ctk
+from logic.search_logic import search
+from data.dictionary import dictionary_data
+from data.conjugations import conjugation_data
 
 class MainWindow(ctk.CTk):
     def __init__(self):
@@ -14,16 +17,35 @@ class MainWindow(ctk.CTk):
         self.grid_columnconfigure((0, 1, 2), weight=1)
         self._set_appearance_mode('system')
         
-
         # search bar
-        self.search_entry = ctk.CTkEntry(self, placeholder_text='Search in English or Tenandi')
-        self.search_entry.grid(row=0, column=1, sticky='ew', pady=(20, 10))
+        self.search_entry = ctk.CTkEntry(self, placeholder_text='Search in English or Tenandi', width=175)
+        self.search_entry.grid(row=0, column=1, pady=(20, 10))
 
         # search button
-        self.search_button = ctk.CTkButton(self, text='search', command=self.search)
+        self.search_button = ctk.CTkButton(
+            self,
+            text='search',
+            command=self.handle_search,
+            corner_radius=10,
+            width=100
+            )
         self.search_button.grid(row=1, column=1, pady=(0, 10))
 
-    def search(self):
-        pass
+        # enter button configuration
+        self.bind('<Return>', lambda event: self.handle_search())
+
+    def handle_search(self):
+        term = self.search_entry.get()
+        result1 = search(term, dictionary_data)
+        result2 = search(term, conjugation_data)
+        if term in dictionary_data and term in conjugation_data:
+            return result1, result2
+        elif term in dictionary_data:
+            return result1
+        elif term in conjugation_data:
+            return result2
+        
+    def result_frame(self):
+        self.result_frame = ctk.CTkFrame(self, )
 
     
